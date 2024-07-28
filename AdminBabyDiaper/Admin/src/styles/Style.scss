@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$background_color : #f6f6f6;
+
+.background_color{
+    background-color: $background_color;
+}
