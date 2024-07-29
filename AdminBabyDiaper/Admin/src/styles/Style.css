@@ -6,4 +6,68 @@
 
 .background_color {
   background-color: #f6f6f6;
+}
+
+.offcanvas {
+  width: 330px !important;
+}
+
+.offcanvas-body {
+  overflow: hidden;
+}
+.offcanvas-body ul li {
+  transition: all 0.5s;
+}
+.offcanvas-body ul li:hover {
+  background-color: #f6f6f6;
+}
+.offcanvas-body ul li.active {
+  background-color: #6f4ef6 !important;
+}
+
+.faq-drawer__content-wrapper {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+.faq-drawer__content-wrapper .faq-drawer__content ul li:hover {
+  background-color: #f6f6f6;
+}
+
+.faq-drawer__title {
+  cursor: pointer;
+  display: block;
+  transition: all 0.25s ease-out;
+}
+
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover {
+  color: #4E4B52;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title + .faq-drawer__content-wrapper {
+  max-height: 750px;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 80px;
+  }
+}
+.product_create form input::-moz-placeholder {
+  font-size: 12px !important;
+}
+.product_create form input::placeholder {
+  font-size: 12px !important;
 }/*# sourceMappingURL=Style.css.map */

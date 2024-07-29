@@ -6,7 +6,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BsShop } from "react-icons/bs";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 const TopHedaer = () => {
   return (
     <div className="pb-3">
@@ -30,9 +30,9 @@ const TopHedaer = () => {
                   <a
                     className="text-decoration-none text-black leading-[1px] text-lg"
                     data-bs-toggle="offcanvas"
-            href="#offcanvasExample"
-            role="button"
-            aria-controls="offcanvasExample"
+                    href="#offcanvasExample"
+                    role="button"
+                    aria-controls="offcanvasExample"
                   >
                     {" "}
                     <IoMenuSharp className="mx-auto" />
@@ -92,108 +92,57 @@ const TopHedaer = () => {
             </div>
             <div className="offcanvas-body">
               <ul>
-                <li className="py-2 flex items-center">
-                <FaHome className="text-blue-600 me-3 text-sm"/>
-                    <Link className="text-dark text-decoration-none text-sm" to={'/'}>Dashboard</Link>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <FaHome className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/"}
+                  >
+                    Dashboard
+                  </Link>
                 </li>
-                <li className="py-2 flex items-center">
-                <div class="accordion-item bg-transparent border-0 py-3">
-                        <h2 class="accordion-header py-3 fs-5" id="flush-headingOne">
-                            <button
-                                class="w-100 align-items-center d-flex bg-transparent border-0 outline-none text-white-50  collapsed"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                aria-expanded="false" aria-controls="flush-collapseOne">
-                                <BsShop className="text-blue-600 me-3 text-sm"/>
-                                <Link className="text-black text-decoration-none text-sm" to={'/Products'}>Products</Link>
-                                <a href="#" class="text-decoration-none text-black ms-auto">
-                                    <IoIosArrowDown></IoIosArrowDown>
-                                </a>
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <ul class="p-0 m-0">
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Accordian
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Breadcrumb
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Cards
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Carseoul
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Collapse
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            ListGroup
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Navs & Tabs
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Pagination
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Placeholders
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Popovers
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Progress
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Spinners
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Tables
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Tooltips
-                                        </a>
-                                    </li>
-                                    <li class="py-3">
-                                        <a href="#" class="text-decoration-none text-dark">
-                                            Nav
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <li className="w-100 py-3 rounded-md px-3 block">
+                  {/* faq */}
+                  <div className="faq-drawer">
+                    <input
+                      className="faq-drawer__trigger"
+                      id="faq-drawer"
+                      type="checkbox"
+                    />
+                    <label className="w-100 font-semibold text-sm faq-drawer__title flex items-center justify-between" htmlFor="faq-drawer">
+                    <div className="flex items-center">
+                    <BsShop className="text-blue-600 me-3 text-sm" />
+                    Products
                     </div>
-                
+                      <IoIosArrowForward />
+                    </label>
+                    <div className="faq-drawer__content-wrapper">
+                      <div className="faq-drawer__content">
+                       <ul className="p-0">
+                        <li className="py-3 ps-4">
+                            <Link className="text-decoration-none text-black text-xs" to={'/All_Products'}>All Products</Link>
+                        </li>
+                        <li className="pb-3 ps-4">
+                            <Link className="text-decoration-none text-black text-xs" to={'/create_Products'}>Create Products</Link>
+                        </li>
+                        <li className="pb-3 ps-4">
+                            <Link className="text-decoration-none text-black text-xs" to={'/Create_Category'}>Create Categories</Link>
+                        </li>
+                        <li className="pb-3 ps-4">
+                            <Link className="text-decoration-none text-black text-xs" to={'/create_brands'}>Create Brands</Link>
+                        </li>
+                       </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <BsShop className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark text-decoration-none text-sm"
+                    to={"/Products"}
+                  >
+                    Products
+                  </Link> */}
                 </li>
               </ul>
             </div>
