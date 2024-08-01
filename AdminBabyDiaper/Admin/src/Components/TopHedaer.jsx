@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BsShop } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
+import { LuShoppingCart } from "react-icons/lu";
+import { FaRegUser } from "react-icons/fa";
+import { FaRegUserCircle } from "react-icons/fa";
+import { BiCategory } from "react-icons/bi";
+import { ImProfile } from "react-icons/im";
+
+
+
 const TopHedaer = () => {
   return (
     <div className="pb-3">
@@ -135,14 +143,56 @@ const TopHedaer = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* <BsShop className="text-blue-600 me-3 text-sm" />
+                </li>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <LuShoppingCart
+                  className="text-blue-600 me-3 text-sm" />
                   <Link
-                    className="text-dark text-decoration-none text-sm"
-                    to={"/Products"}
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/orderlist"}
                   >
-                    Products
-                  </Link> */}
+                    Order Lists
+                  </Link>
+                </li>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <FaRegUser
+                  className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/Customerorder"}
+                  >
+                    Customers & Orders
+                  </Link>
+                </li>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <FaRegUserCircle
+                  className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/manageusers"}
+                  >
+                    Manage Users
+                  </Link>
+                </li>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <BiCategory
+                  className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/category"}
+                  >
+                    Categories
+                  </Link>
+                </li>
+                <li className="py-3 rounded-md px-3 flex items-center">
+                  <ImProfile
+                  className="text-blue-600 me-3 text-sm" />
+                  <Link
+                    className="text-dark font-semibold text-decoration-none text-sm"
+                    to={"/profile"}
+                  >
+                    Profile
+                  </Link>
                 </li>
               </ul>
             </div>

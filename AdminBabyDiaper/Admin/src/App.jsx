@@ -8,6 +8,11 @@ import Categories_create from './pages/Categories_create'
 import Brands_create from './pages/Brands_create'
 import Products_create from './pages/Products_create'
 import FooterCopyright from './Components/FooterCopyright'
+import OrderList from './pages/OrderList'
+import Customer_order from './pages/Customer_order'
+import ManageUsers from './pages/ManageUsers'
+import Categories from './pages/Categories'
+import Profile from './pages/Profile'
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +24,11 @@ const App = () => {
         <Route path="/Create_Category" element={<Categories_create />} />
         <Route path="/create_brands" element={<Brands_create />} />
         <Route path="/copyright" element={<FooterCopyright />} />
+        <Route path="/orderlist" element={<OrderList />} />
+        <Route path="/Customerorder" element={<Customer_order />} />
+        <Route path="/manageusers" element={<ManageUsers />} />
+        <Route path="/Category" element={<Categories />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )

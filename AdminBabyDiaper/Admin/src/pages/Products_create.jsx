@@ -5,7 +5,7 @@ import FooterCopyright from '../Components/FooterCopyright'
 
 const Products_create = () => {
   return (
-    <div className='background_color'>
+    <div className='background_color overflow-auto h-screen'>
       <TopHedaer></TopHedaer>
       <section className='product_create pt-10 pb-20'>
         <div className="container">
@@ -71,7 +71,7 @@ const Products_create = () => {
                             </div>
                         </div>
                         <div className='w-20 me-auto'>
-                            <button className='rounded-md w-100 h-10 bg-indigo-500'>
+                            <button className='ms-2 rounded-md w-100 h-10 bg-indigo-500'>
                                 <Link className='text-white text-decoration-none'>Save</Link>
                             </button>
                         </div>
